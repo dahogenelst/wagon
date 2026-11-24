@@ -1,0 +1,316 @@
+GIT
+  remote: https://github.com/dahogenelst/coal.git
+  revision: 86661162de44275f3d7c91b41d3af193aab5b057
+  branch: master
+  specs:
+    locomotivecms_coal (1.8.0.alpha1)
+      activesupport (>= 7.1)
+      faraday (~> 2.0)
+      faraday-httpclient (~> 2.0)
+      faraday-multipart (~> 1.0)
+      httpclient (~> 2.8)
+      mime-types (~> 3.5)
+
+GIT
+  remote: https://github.com/dahogenelst/common.git
+  revision: eca40e5febaee6a8e46e668eec585a22559a8978
+  branch: master
+  specs:
+    locomotivecms_common (0.6.0.alpha1)
+      activesupport (>= 5)
+      attr_extras (~> 7.1)
+      colorize
+      ostruct
+      stringex (~> 2.8)
+
+GIT
+  remote: https://github.com/dahogenelst/steam.git
+  revision: e4b9cfbbec71511e5394519cb195db73675fee7a
+  branch: master
+  specs:
+    locomotivecms_steam (1.8.0.alpha2)
+      RedCloth (~> 4.3)
+      bcrypt (~> 3.1)
+      chronic (~> 0.10)
+      dragonfly (~> 1.4)
+      duktape (~> 2.0)
+      execjs (~> 2.9)
+      httparty (~> 0.22)
+      kramdown (~> 2.3)
+      liquid (~> 4.0)
+      locomotivecms_common (~> 0.6.0.alpha1)
+      mime-types (~> 3.5)
+      mimetype-fu (~> 0.1)
+      moneta (~> 1.6)
+      morphine (~> 0.1)
+      multi_json (~> 1.15)
+      nokogiri (~> 1.16)
+      parser (~> 3.3)
+      pony (~> 1.12)
+      rack-cache (>= 1.7, < 2)
+      rack-rewrite (~> 1.5)
+      rack-session (~> 2.0)
+      rack_csrf (~> 2.6)
+      sanitize (>= 6.0, < 8)
+
+PATH
+  remote: .
+  specs:
+    locomotivecms_wagon (3.2.0.alpha2)
+      benchmark
+      faker (~> 3.2)
+      haml (~> 6.2)
+      listen (~> 3.8)
+      locomotivecms_coal (~> 1.8.0.alpha1)
+      locomotivecms_common (~> 0.6.0.alpha1)
+      locomotivecms_steam (~> 1.8.0.alpha2)
+      neatjson (~> 0.10)
+      netrc (~> 0.11)
+      oj (~> 3.16)
+      puma (~> 6.4)
+      rackup (~> 2.1)
+      thor (~> 1.3)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    RedCloth (4.3.4)
+    activesupport (8.1.4.1)
+      base64
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.3.1)
+      connection_pool (>= 2.2.5)
+      drb
+      i18n (>= 1.6, < 2)
+      json
+      logger (>= 1.4.2)
+      minitest (>= 5.1)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
+      uri (>= 0.13.1)
+    addressable (2.10.0)
+      public_suffix (>= 2.0.2, < 8.0)
+    ast (2.4.3)
+    attr_extras (7.1.0)
+    base64 (0.3.0)
+    bcrypt (3.1.22)
+    benchmark (0.5.0)
+    bigdecimal (4.1.3)
+    byebug (13.0.0)
+      reline (>= 0.6.0)
+    chronic (0.10.2)
+    coderay (1.1.3)
+    colorize (1.1.0)
+    concurrent-ruby (1.3.8)
+    connection_pool (3.0.3)
+    crass (1.0.8)
+    csv (3.3.7)
+    date (3.6.0)
+    diff-lcs (1.6.2)
+    dragonfly (1.4.2)
+      addressable (~> 2.3)
+      multi_json (~> 1.0)
+      ostruct (~> 0.6.1)
+      rack (>= 1.3)
+    drb (2.2.3)
+    duktape (2.7.0.0)
+    execjs (2.10.2)
+      json (>= 2)
+    faker (3.8.0)
+      i18n (>= 1.8.11, < 2)
+    faraday (2.15.1)
+      faraday-net_http (>= 2.0, < 3.6)
+      json
+      logger
+    faraday-httpclient (2.0.2)
+      httpclient (>= 2.2)
+    faraday-multipart (1.2.0)
+      multipart-post (~> 2.0)
+    faraday-net_http (3.5.0)
+      net-http (~> 0.5)
+    ffi (1.17.4-aarch64-linux-gnu)
+    ffi (1.17.4-aarch64-linux-musl)
+    ffi (1.17.4-arm-linux-gnu)
+    ffi (1.17.4-arm-linux-musl)
+    ffi (1.17.4-arm64-darwin)
+    ffi (1.17.4-x86_64-darwin)
+    ffi (1.17.4-x86_64-linux-gnu)
+    ffi (1.17.4-x86_64-linux-musl)
+    haml (6.4.0)
+      temple (>= 0.8.2)
+      thor
+      tilt
+    httparty (0.25.1)
+      csv
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
+    httpclient (2.11.0)
+      mutex_m
+    i18n (1.15.2)
+      concurrent-ruby (~> 1.0)
+    io-console (0.9.5)
+    json (3.2.0)
+    json_spec (1.1.5)
+      multi_json (~> 1.0)
+      rspec (>= 2.0, < 4.0)
+    kramdown (2.6.1)
+      rexml (>= 3.4.4)
+    liquid (4.0.4)
+    listen (3.10.1)
+      logger
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.7.0)
+    mail (2.9.1)
+      logger
+      mini_mime (>= 0.1.1)
+      net-imap
+      net-pop
+      net-smtp
+    method_source (1.1.0)
+    mime-types (3.7.0)
+      logger
+      mime-types-data (~> 3.2025, >= 3.2025.0507)
+    mime-types-data (3.2026.1103)
+    mimetype-fu (0.1.2)
+    mini_mime (1.1.5)
+    minitest (6.1.0)
+      drb (~> 2.0)
+      prism (>= 1.5, < 3)
+    moneta (1.6.0)
+    morphine (0.1.1)
+    multi_json (1.21.2)
+    multi_xml (0.9.1)
+      bigdecimal (>= 3.1, < 5)
+    multipart-post (2.4.1)
+    mutex_m (0.3.0)
+    neatjson (0.10.5)
+    net-http (0.10.0)
+      net-protocol (>= 0.3.0)
+      uri (>= 0.11.1)
+    net-imap (0.6.8)
+      date
+      net-protocol
+    net-pop (0.1.2)
+      net-protocol
+    net-protocol (0.4.0)
+      timeout
+    net-smtp (0.5.2)
+      net-protocol
+    netrc (0.11.0)
+    nio4r (2.7.5)
+    nokogiri (1.19.7-aarch64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.19.7-aarch64-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.19.7-arm-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.19.7-arm-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.19.7-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.19.7-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.19.7-x86_64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.19.7-x86_64-linux-musl)
+      racc (~> 1.4)
+    oj (3.17.8)
+      bigdecimal (>= 3.0)
+    ostruct (0.6.3)
+    parser (3.3.14.0)
+      ast (~> 2.4.1)
+      racc
+    pony (1.13.1)
+      mail (>= 2.0)
+    prism (2.1.0-aarch64-linux-gnu)
+    prism (2.1.0-aarch64-linux-musl)
+    prism (2.1.0-arm-linux-gnu)
+    prism (2.1.0-arm-linux-musl)
+    prism (2.1.0-arm64-darwin)
+    prism (2.1.0-x86_64-darwin)
+    prism (2.1.0-x86_64-linux-gnu)
+    prism (2.1.0-x86_64-linux-musl)
+    pry (0.16.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+      reline (>= 0.6.0)
+    pry-byebug (3.12.0)
+      byebug (~> 13.0)
+      pry (>= 0.13, < 0.17)
+    public_suffix (7.0.5)
+    puma (6.6.1)
+      nio4r (~> 2.0)
+    racc (1.8.1)
+    rack (3.2.9)
+    rack-cache (1.17.0)
+      rack (>= 0.4)
+    rack-rewrite (1.5.1)
+    rack-session (2.1.2)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0)
+    rack_csrf (2.7.0)
+      rack (>= 1.1.0)
+    rackup (2.3.1)
+      rack (>= 3)
+    rake (13.4.2)
+    rb-fsevent (0.11.2)
+    rb-inotify (0.11.1)
+      ffi (~> 1.0)
+    reline (0.7.0)
+      io-console (~> 0.5)
+    rexml (3.4.4)
+    rspec (3.13.2)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
+    rspec-core (3.13.7)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.6)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.9)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-support (3.13.8)
+    sanitize (7.0.2)
+      crass (~> 1.0.8)
+      nokogiri (>= 1.19.7)
+    securerandom (0.4.1)
+    simplecov (1.3.2)
+    stringex (2.8.6)
+    temple (0.10.7)
+    thor (1.5.0)
+    tilt (2.9.0)
+    timeout (0.6.1)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
+    uri (1.1.2)
+    vcr (6.4.1)
+
+PLATFORMS
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux-gnu
+  arm-linux-musl
+  arm64-darwin
+  x86_64-darwin
+  x86_64-linux
+  x86_64-linux-gnu
+  x86_64-linux-musl
+
+DEPENDENCIES
+  json_spec (~> 1.1)
+  locomotivecms_coal!
+  locomotivecms_common!
+  locomotivecms_steam!
+  locomotivecms_wagon!
+  pry-byebug (~> 3.10)
+  rake (~> 13.0)
+  rspec (~> 3.13)
+  simplecov
+  vcr (~> 6.2)
+  wdm (~> 0.1)
+
+BUNDLED WITH
+   2.7.0

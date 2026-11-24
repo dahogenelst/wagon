@@ -1,18 +1,19 @@
 source 'https://rubygems.org'
 
 # Specify your gem's dependencies in locomotivecms_wagon.gemspec
+
+gem 'locomotivecms_common', github: 'dahogenelst/common', branch: 'master'
+gem 'locomotivecms_coal',   github: 'dahogenelst/coal',   branch: 'master'
+gem 'locomotivecms_steam',  github: 'dahogenelst/steam',  branch: 'master'
 gemspec
 
 # Mac OS X
-gem 'rb-fsevent', '~> 0.10.3', require: 'rb-fsevent' if RUBY_PLATFORM.include?('darwin')
 
 # Unix
-gem 'therubyracer', require: 'v8', platforms: :ruby unless RUBY_PLATFORM.include?('darwin')
 
-gem 'rb-inotify', '~> 0.10.0', require: 'rb-inotify' if RUBY_PLATFORM.include?('linux')
 
 # Windows
-gem 'wdm', '~> 0.1.1', require: 'wdm' if RUBY_PLATFORM =~ /mswin|mingw/i
+gem 'wdm', '~> 0.1', platforms: :windows # rb-fsevent and rb-inotify come with listen
 
 # Development
 # gem 'locomotivecms_common', github: 'locomotivecms/common', ref: '054505c' , require: false
@@ -26,15 +27,15 @@ gem 'wdm', '~> 0.1.1', require: 'wdm' if RUBY_PLATFORM =~ /mswin|mingw/i
 # gem 'locomotivecms_common', path: '../common', require: false
 
 group :development, :test do
-  gem 'pry-byebug',         '~> 3.10.1'
+  gem 'pry-byebug',         '~> 3.10'
 end
 
 group :test do
-  gem 'rspec',              '~> 3.12.0'
-  gem 'json_spec',          '~> 1.1.5'
-  gem 'vcr',                '~> 6.2.0'
+  gem 'rspec',              '~> 3.13'
+  gem 'json_spec',          '~> 1.1'
+  gem 'vcr',                '~> 6.2'
 
-  # gem 'codeclimate-test-reporter',  '~> 1.0.7',  require: false
-  # gem 'coveralls',                  '~> 0.8.19', require: false
-  gem 'simplecov',                  '~> 0.22.0', require: false
+  # gem 'codeclimate-test-reporter',  '~> 1.0',  require: false
+  # gem 'coveralls',                  '~> 0.8', require: false
+  gem 'simplecov',          require: false
 end
