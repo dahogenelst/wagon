@@ -26,7 +26,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'thor',                  '~> 1.3'
 
-  gem.add_dependency 'puma',                  '~> 6.4'
+  gem.add_dependency 'puma',                  '>= 6.4', '< 9.0'
   gem.add_dependency 'rackup',                '~> 2.1'
   
   gem.add_dependency 'netrc',                 '~> 0.11'
