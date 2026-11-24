@@ -11,7 +11,7 @@ describe Locomotive::Wagon::SyncCommand do
 
   before { Locomotive::Steam::Adapters::Filesystem::SimpleCacheStore.new.clear }
 
-  before { VCR.insert_cassette 'sync', match_requests_on: [:uri, :method, :query, :body, :headers] }
+  before { VCR.insert_cassette 'sync', match_requests_on: [:uri, :method, :query, :body, :headers_without_user_agent] }
   after  { VCR.eject_cassette }
 
   let(:env)       { 'hosting-sync' }

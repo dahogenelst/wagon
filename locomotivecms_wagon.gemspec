@@ -41,4 +41,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'neatjson',              '~> 0.10'
 
   gem.add_dependency 'faker',                 '~> 3.2'
+  gem.add_dependency 'benchmark'  # no longer a default gem since Ruby 4.0
+
+  gem.required_ruby_version = ['>= 3.3']
 end
