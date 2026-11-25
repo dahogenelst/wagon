@@ -37,6 +37,8 @@ module Locomotive::Wagon
       # then the cache of Steam will be cleared.
       listen
 
+      Process.daemon(true) if options[:daemonize] # puma >= 5 ignores its daemon option
+
       # let's start!
       begin
         server.start
