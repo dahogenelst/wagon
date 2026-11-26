@@ -40,4 +40,33 @@ describe Locomotive::Wagon::PushThemeAssetsCommand do
 
   end
 
+  describe '#persist' do
+
+    # a stylesheet/javascript is precompiled into a tempfile, read when the asset is sent
+    let(:entity) do
+      Class.new do
+        attr_accessor :filepath
+        def realname; 'application.js'; end
+        def relative_url; 'javascripts/application.js'; end
+        def stylesheet_or_javascript?; true; end
+        def to_hash; GC.start; { source: File.read(filepath) }; end # a GC run in between used to delete the tempfile
+      end.new
+    end
+    let(:theme_assets) { double('theme_assets') }
+
+    before do
+      allow(command).to receive(:read_content).and_return('var a = 1;')
+      allow(command).to receive(:remote_entity).and_return(nil)
+      allow(command).to receive(:api_client).and_return(double(theme_assets: theme_assets))
+      allow(command).to receive(:register_url)
+    end
+
+    it 'keeps the precompiled file until the asset is sent, then removes it' do
+      expect(theme_assets).to receive(:create).with({ source: 'var a = 1;' }).and_return(double)
+      command.persist(entity)
+      expect(File.exist?(entity.filepath)).to eq false
+    end
+
+  end
+
 end

@@ -18,7 +18,8 @@ module Locomotive::Wagon
     def persist(decorated_entity)
       return if decorated_entity.realname.starts_with?('_')
 
-      precompile(decorated_entity)
+      # keep a reference: once the Tempfile is garbage collected, its file is deleted
+      precompiled = precompile(decorated_entity)
 
       resource = if (_entity = remote_entity(decorated_entity)).nil?
         api_client.theme_assets.create(decorated_entity.to_hash)
@@ -28,6 +29,8 @@ module Locomotive::Wagon
       end
 
       register_url(resource)
+    ensure
+      precompiled&.unlink
     end
 
     def label_for(decorated_entity)
