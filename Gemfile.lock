@@ -25,7 +25,7 @@ GIT
 
 GIT
   remote: https://github.com/dahogenelst/steam.git
-  revision: 4128642f9338f2f9be928ebf67b63b61f120fa0b
+  revision: a05935a476923d9cbaa8cefdb9484eb8171a235b
   branch: master
   specs:
     locomotivecms_steam (1.8.0.alpha2)
@@ -35,7 +35,7 @@ GIT
       dragonfly (~> 1.4)
       duktape (~> 2.0)
       execjs (~> 2.9)
-      httparty (~> 0.22)
+      httparty (~> 0.24)
       kramdown (~> 2.3)
       liquid (~> 4.0)
       locomotivecms_common (~> 0.6.0.alpha1)
