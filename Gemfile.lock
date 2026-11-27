@@ -25,7 +25,7 @@ GIT
 
 GIT
   remote: https://github.com/dahogenelst/steam.git
-  revision: a05935a476923d9cbaa8cefdb9484eb8171a235b
+  revision: 796575379ce431657dbd2ebaed21db84c900e78d
   branch: master
   specs:
     locomotivecms_steam (1.8.0.alpha2)
@@ -47,7 +47,6 @@ GIT
       nokogiri (~> 1.16)
       parser (~> 3.3)
       pony (~> 1.12)
-      rack-cache (>= 1.7, < 2)
       rack-rewrite (~> 1.5)
       rack-session (~> 2.0)
       rack_csrf (~> 2.6)
@@ -243,8 +242,6 @@ GEM
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.9)
-    rack-cache (1.17.0)
-      rack (>= 0.4)
     rack-rewrite (1.5.1)
     rack-session (2.1.2)
       base64 (>= 0.1.0)
