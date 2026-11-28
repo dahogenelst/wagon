@@ -30,7 +30,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'rackup',                '~> 2.1'
   
   gem.add_dependency 'netrc',                 '~> 0.11'
-  gem.add_dependency 'oj',                    '~> 3.16'
 
   gem.add_dependency 'locomotivecms_common',  '~> 0.6.0.alpha1'
   gem.add_dependency 'locomotivecms_coal',    '~> 1.8.0.alpha1'
